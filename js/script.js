@@ -19,7 +19,7 @@ $('.file').mousedown(function(event){
                 break;
 
             case '.html':
-                showTXT(target);
+                showHTML(target);
                 break;
 
             case '.css':
@@ -35,11 +35,11 @@ $('.file').mousedown(function(event){
                 break;
 
             case '.php':
-                showCODE(target);
+                showPHP(target);
                 break;
 
             case '.htaccess':
-                showTXT(target);
+                showHTACCESS(target);
                 break;
 
             case '.jpg':
@@ -126,8 +126,8 @@ function showTXT(target) {
         },
         open: function () {
             $.get(target, function(data){
-                var file = '<pre>' + data + '</pre>';
-                $("#dialog").html(file);
+                $("#dialog").text(data);
+                $("#dialog").html('<pre>' + $('#dialog').html() + '</pre>');
             });
         }
     });
@@ -148,26 +148,6 @@ function showIMG(target) {
         open: function () {
             var img = "<img src='" + target + "' style='bottom: 0;left: 0;margin: auto;max-height: 100%;max-width: 100%;position: absolute;right: 0;top: 0;'>";
             $("#dialog").html(img);
-        }
-    });
-}
-
-function showCODE(target) {
-    $("#dialog").dialog({
-        modal: true,
-        title: target,
-        width: '95vw',
-        height: 900,
-        buttons: {
-            Close: function () {
-                $("#dialog").html('');
-                $(this).dialog('close');
-            }
-        },
-        open: function () {
-            $.get(target, function(data){
-                $("#dialog").text(data);
-            });
         }
     });
 }
@@ -227,4 +207,41 @@ function showHTACCESS(target) {
     });
 }
 
+function showHTML(target) {
+    $("#dialog").dialog({
+        modal: true,
+        title: target,
+        width: '95vw',
+        height: 900,
+        buttons: {
+            Close: function () {
+                $("#dialog").html('');
+                $(this).dialog('close');
+            }
+        },
+        open: function () {
+            $("#dialog").load(target);
+        }
+    });
+}
 
+function showPHP(target) {
+    $("#dialog").dialog({
+        modal: true,
+        title: target,
+        width: '95vw',
+        height: 900,
+        buttons: {
+            Close: function () {
+                $("#dialog").html('');
+                $(this).dialog('close');
+            }
+        },
+        open: function () {
+            var regex = '^.*\/';
+            var cible = target.match(regex);
+            console.log(cible);
+            $("#dialog").load(cible[0]);
+        }
+    });
+}

@@ -23,7 +23,7 @@
     <div class='H5AI'>
         <div class='H5AI_element nav_panel'>
             <div class='panel_element panel_folder'>
-                    <a href='/my_h5ai'><img src='/my_h5ai/src/arrow.png' style='width:15px; transform: rotate(90deg)'><img src='/my_h5ai/src/folder.png' style='width:15px'>H5AI</a>
+                    <a href='/my_h5ai'><img src='/my_h5ai/src/arrow.png' style='width:15px; transform: rotate(90deg)'><img src='/my_h5ai/src/folder.png' style='width:15px'>my_h5ai</a>
             </div>
             <?php $navpanel->displayFiles('./', 18); ?>
         </div>

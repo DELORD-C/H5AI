@@ -65,7 +65,7 @@ class Explorer extends Controller {
             if(!is_dir(substr($this->url . '/' . $value, 8))) {
                 $ext = $this->getExt($value);
                 $icon = $this->getIcon($ext);
-                $way = $value;
+                $way = '/my_h5ai/' . substr($this->url . '/' . $value, 8);
                 $size = $this->getFilesize(substr($this->url . '/' . $value, 8));
                 $last = str_replace(':', 'h', date("d.m.y à H:i", filemtime(substr($this->url . '/' . $value, 8))));
         ?>
