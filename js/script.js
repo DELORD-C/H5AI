@@ -90,9 +90,10 @@ $('.file').mousedown(function(event){
 });
 
 function showPDF(target) {
+    var name = target.match('[^\/]*$')[0];
     $("#dialog").dialog({
         modal: true,
-        title: target,
+        title: name,
         width: 1800,
         height: 900,
         buttons: {
@@ -113,9 +114,10 @@ function showPDF(target) {
 }
 
 function showTXT(target) {
+    var name = target.match('[^\/]*$')[0];
     $("#dialog").dialog({
         modal: true,
-        title: target,
+        title: name,
         width: '95vw',
         height: 900,
         buttons: {
@@ -134,9 +136,10 @@ function showTXT(target) {
 }
 
 function showIMG(target) {
+    var name = target.match('[^\/]*$')[0];
     $("#dialog").dialog({
         modal: true,
-        title: target,
+        title: name,
         width: '95vw',
         height: 900,
         buttons: {
@@ -153,9 +156,10 @@ function showIMG(target) {
 }
 
 function showVIDEO(target) {
+    var name = target.match('[^\/]*$')[0];
     $("#dialog").dialog({
         modal: true,
-        title: target,
+        title: name,
         width: '95vw',
         height: 900,
         buttons: {
@@ -172,9 +176,10 @@ function showVIDEO(target) {
 }
 
 function showGIT(target) {
+    var name = target.match('[^\/]*$')[0];
     $("#dialog").dialog({
         modal: true,
-        title: target,
+        title: name,
         width: '95vw',
         height: 900,
         buttons: {
@@ -190,9 +195,10 @@ function showGIT(target) {
 }
 
 function showHTACCESS(target) {
+    var name = target.match('[^\/]*$')[0];
     $("#dialog").dialog({
         modal: true,
-        title: target,
+        title: name,
         width: '95vw',
         height: 900,
         buttons: {
@@ -208,9 +214,10 @@ function showHTACCESS(target) {
 }
 
 function showHTML(target) {
+    var name = target.match('[^\/]*$')[0];
     $("#dialog").dialog({
         modal: true,
-        title: target,
+        title: name,
         width: '95vw',
         height: 900,
         buttons: {
@@ -226,9 +233,10 @@ function showHTML(target) {
 }
 
 function showPHP(target) {
+    var name = target.match('[^\/]*$')[0];
     $("#dialog").dialog({
         modal: true,
-        title: target,
+        title: name,
         width: '95vw',
         height: 900,
         buttons: {
