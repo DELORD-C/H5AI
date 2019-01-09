@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    margin-top: -21px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title {
+    text-align: center;
+    background-color: #1a6380;
+    color: #fff;
+}
+
+.list {
+    color: rgb(26, 99, 128);
+    list-style: none;
+}
+
+.title h1 {
+    padding: 10px;
+}
+
+.H5AI {
+    width: 99vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-gap: 5px;
+}
+
+.H5AI_element {
+    /* border: 1px solid rgb(26, 99, 128); */
+    border-radius: 5px;
+    padding: 10px;
+    height: 85vh;
+}
+
+.explorer {
+    padding: 0;
+    padding-top: 8px;
+}
+
+.nav_panel {
+    color: #fff;
+    border-right: 1px solid rgba(26, 99, 128, 0.267);
+}
+
+.explorer_element img {
+    margin-right: 3px;
+}
+
+.explorer_element a {
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: rgb(26, 99, 128);
+    border: 1px solid transparent;
+    transition-duration: 0.1s;
+}
+
+.explorer_element a div {
+    display: -webkit-box;
+    display: -moz-box;
+}
+
+.explorer_element a div p {
+    margin: 0;
+    height: 20px;
+    line-height: 20px;
+}
+
+.explorer_element a:hover {
+    color: rgb(46, 196, 255);
+    background-color: rgba(0, 183, 255, 0.027);
+    border: 1px solid rgba(26, 99, 128, 0.192);
+    box-shadow: 0px 5px 15px -3px black;
+}
+
+.panel_element img {
+    margin-right: 3px;
+}
+
+.panel_element a {
+    text-decoration: none;
+    color: rgb(26, 99, 128);
+    transition-duration: 0.1s;
+}
+
+.panel_element a:hover {
+    color: rgb(46, 196, 255);
+}
+
+h5 {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.ui-widget-header {
+    background: rgb(26, 99, 128);
+}
