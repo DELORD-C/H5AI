@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>H5AI</title>
+    <title>my_h5ai</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js" type="text/javascript"></script>
     <link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/blitzer/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="/H5AI/css/style.css">
-    <link rel="shortcut icon" href="/H5AI/src/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/my_h5ai/css/style.css">
+    <link rel="shortcut icon" href="/my_h5ai/src/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
     <div class='H5AI'>
         <div class='H5AI_element nav_panel'>
             <div class='panel_element panel_folder'>
-                    <a href='/H5AI'><img src='/H5AI/src/arrow.png' style='width:15px; transform: rotate(90deg)'><img src='/H5AI/src/folder.png' style='width:15px'>H5AI</a>
+                    <a href='/my_h5ai'><img src='/my_h5ai/src/arrow.png' style='width:15px; transform: rotate(90deg)'><img src='/my_h5ai/src/folder.png' style='width:15px'>H5AI</a>
             </div>
             <?php $navpanel->displayFiles('./', 18); ?>
         </div>
@@ -34,7 +34,7 @@
     </div>
     <div id="dialog" style="display: none">
 
-    <script src="/H5AI/js/script.js"></script>
+    <script src="/my_h5ai/js/script.js"></script>
 </body>
 
 </html>

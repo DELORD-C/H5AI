@@ -22,10 +22,10 @@ class Explorer extends Controller {
 
     function displayFolders () {
         foreach ($this->dirs as $key => $value) {
-            if(is_dir(substr($this->url . '/' . $value, 5))) {
+            if(is_dir(substr($this->url . '/' . $value, 8))) {
                 if ($value != '..') {
                     if ($value == '.') {
-                        if ($this->url != 'H5AI') {
+                        if ($this->url != 'my_h5ai') {
                             preg_match('/\/[^\/]*\/$/', $this->back, $matches);
                             if (isset($matches[0])) {
                                 $strback = trim ($matches[0], '/');
@@ -35,17 +35,17 @@ class Explorer extends Controller {
                             }
             ?>
             <div class='explorer_element explorer_folder'>
-                <a style='display:grid' href='/<?=$this->back?>'><div><img src='/H5AI/src/back.png' style='width:20px'><img src='/H5AI/src/folder.png' style='width:20px'><p><?=$strback?></p></div></a>
+                <a style='display:grid' href='/<?=$this->back?>'><div><img src='/my_h5ai/src/back.png' style='width:20px'><img src='/my_h5ai/src/folder.png' style='width:20px'><p><?=$strback?></p></div></a>
             </div>
             <?php
                         }
                     }
                     else {
-                        $size = $this->GetDirectorySize(substr($this->url . '/' . $value, 5));
-                        $this->last = str_replace(':', 'h', date("d.m.y à H:i", filemtime(substr($this->url . '/' . $value, 5))));
+                        $size = $this->GetDirectorySize(substr($this->url . '/' . $value, 8));
+                        $this->last = str_replace(':', 'h', date("d.m.y à H:i", filemtime(substr($this->url . '/' . $value, 8))));
             ?>
             <div class='explorer_element explorer_folder'>
-                <a style='display:grid; grid-template-columns:4fr 1fr 1fr' href='/H5AI/<?=substr($this->url . '/' . $value, 5)?>'><div><img src='/H5AI/src/folder.png' style='width:20px'><p><?=$value?></p></div><h5 style='margin: 0;'><?=$this->last?></h5><h5 style='margin: 0; text-align: right'><?=$size?></h5></a>
+                <a style='display:grid; grid-template-columns:4fr 1fr 1fr' href='/my_h5ai/<?=substr($this->url . '/' . $value, 8)?>'><div><img src='/my_h5ai/src/folder.png' style='width:20px'><p><?=$value?></p></div><h5 style='margin: 0;'><?=$this->last?></h5><h5 style='margin: 0; text-align: right'><?=$size?></h5></a>
             </div>
         
         
@@ -62,15 +62,15 @@ class Explorer extends Controller {
 
     function displayFiles () {
         foreach ($this->dirs as $key => $value) {
-            if(!is_dir(substr($this->url . '/' . $value, 5))) {
+            if(!is_dir(substr($this->url . '/' . $value, 8))) {
                 $ext = $this->getExt($value);
                 $icon = $this->getIcon($ext);
                 $way = $value;
-                $size = $this->getFilesize(substr($this->url . '/' . $value, 5));
-                $last = str_replace(':', 'h', date("d.m.y à H:i", filemtime(substr($this->url . '/' . $value, 5))));
+                $size = $this->getFilesize(substr($this->url . '/' . $value, 8));
+                $last = str_replace(':', 'h', date("d.m.y à H:i", filemtime(substr($this->url . '/' . $value, 8))));
         ?>
             <div class='explorer_element explorer_file'>
-                <a style='display:grid; grid-template-columns:4fr 1fr 1fr' href='#' class='file' ext='<?=$ext?>' url='<?=$way?>'><div><img src='/H5AI/src/<?=$icon?>' style='width:20px'><p><?=$value?></p></div><h5 style='margin: 0;'><?=$last?></h5><h5 style='margin: 0; text-align: right'><?=$size?></h5></a>
+                <a style='display:grid; grid-template-columns:4fr 1fr 1fr' href='#' class='file' ext='<?=$ext?>' url='<?=$way?>'><div><img src='/my_h5ai/src/<?=$icon?>' style='width:20px'><p><?=$value?></p></div><h5 style='margin: 0;'><?=$last?></h5><h5 style='margin: 0; text-align: right'><?=$size?></h5></a>
             </div>
         <?php
             }
