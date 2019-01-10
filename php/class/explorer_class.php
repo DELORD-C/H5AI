@@ -35,7 +35,13 @@ class Explorer extends Controller {
                             }
             ?>
             <div class='explorer_element explorer_folder'>
-                <a style='display:grid' href='/<?=$this->back?>'><div><img src='/my_h5ai/src/back.png' style='width:20px'><img src='/my_h5ai/src/folder.png' style='width:20px'><p><?=$strback?></p></div></a>
+                <a class='display-grid' href='/<?=$this->back?>'>
+                    <div>
+                        <img src='/my_h5ai/src/back.png' class='icone'>
+                        <img src='/my_h5ai/src/folder.png' class='icone'>
+                        <p><?=$strback?></p>
+                    </div>
+                </a>
             </div>
             <?php
                         }
@@ -45,7 +51,14 @@ class Explorer extends Controller {
                         $this->last = str_replace(':', 'h', date("d.m.y à H:i", filemtime(substr($this->url . '/' . $value, 8))));
             ?>
             <div class='explorer_element explorer_folder'>
-                <a style='display:grid; grid-template-columns:4fr 1fr 1fr' href='/my_h5ai/<?=substr($this->url . '/' . $value, 8)?>'><div><img src='/my_h5ai/src/folder.png' style='width:20px'><p><?=$value?></p></div><h5 style='margin: 0;'><?=$this->last?></h5><h5 style='margin: 0; text-align: right'><?=$size?></h5></a>
+                <a class='display-grid fouroneone' href='/my_h5ai/<?=substr($this->url . '/' . $value, 8)?>'>
+                    <div>
+                        <img src='/my_h5ai/src/folder.png' class='icone'>
+                        <p><?=$value?></p>
+                    </div>
+                    <h5><?=$this->last?></h5>
+                    <h5 class='align-right'><?=$size?></h5>
+                </a>
             </div>
         
         
@@ -70,7 +83,14 @@ class Explorer extends Controller {
                 $last = str_replace(':', 'h', date("d.m.y à H:i", filemtime(substr($this->url . '/' . $value, 8))));
         ?>
             <div class='explorer_element explorer_file'>
-                <a style='display:grid; grid-template-columns:4fr 1fr 1fr' href='#' class='file' ext='<?=$ext?>' url='<?=$way?>'><div><img src='/my_h5ai/src/<?=$icon?>' style='width:20px'><p><?=$value?></p></div><h5 style='margin: 0;'><?=$last?></h5><h5 style='margin: 0; text-align: right'><?=$size?></h5></a>
+                <a class='display-grid fouroneone' href='#' class='file' ext='<?=$ext?>' url='<?=$way?>'>
+                    <div>
+                        <img src='/my_h5ai/src/<?=$icon?>' class='icone'>
+                        <p><?=$value?></p>
+                    </div>
+                    <h5><?=$last?></h5>
+                    <h5 class='align-right'><?=$size?></h5>
+                </a>
             </div>
         <?php
             }

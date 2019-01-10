@@ -5,6 +5,34 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+h5 {
+    margin: 0;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+.display-grid {
+    display: grid;
+}
+
+.fouroneone {
+    grid-template-columns: 4fr 1fr 1fr;
+}
+
+.icone {
+    width: 20px;
+}
+
+.icony {
+    width: 15px;
+}
+
 .title {
     text-align: center;
     background-color: #1a6380;
