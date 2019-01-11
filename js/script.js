@@ -19,7 +19,12 @@ $('.file').mousedown(function(event){
                 break;
 
             case '.html':
+            if (typeof modhtml !== 'undefined') {
                 showHTML(target);
+            }
+            else {
+                showTXT(target);
+            }
                 break;
 
             case '.css':
@@ -209,25 +214,6 @@ function showHTACCESS(target) {
         },
         open: function () {
             $("#dialog").html('Fichier HTACCESS');
-        }
-    });
-}
-
-function showHTML(target) {
-    var name = target.match('[^\/]*$')[0];
-    $("#dialog").dialog({
-        modal: true,
-        title: name,
-        width: '95vw',
-        height: 900,
-        buttons: {
-            Close: function () {
-                $("#dialog").html('');
-                $(this).dialog('close');
-            }
-        },
-        open: function () {
-            $("#dialog").load(target);
         }
     });
 }

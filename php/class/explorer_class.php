@@ -83,7 +83,7 @@ class Explorer extends Controller {
                 $last = str_replace(':', 'h', date("d.m.y à H:i", filemtime(substr($this->url . '/' . $value, 8))));
         ?>
             <div class='explorer_element explorer_file'>
-                <a class='display-grid fouroneone' href='#' class='file' ext='<?=$ext?>' url='<?=$way?>'>
+                <a class='display-grid fouroneone file' href='#' ext='<?=$ext?>' url='<?=$way?>'>
                     <div>
                         <img src='/my_h5ai/src/<?=$icon?>' class='icone'>
                         <p><?=$value?></p>
